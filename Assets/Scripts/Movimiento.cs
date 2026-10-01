@@ -3,16 +3,24 @@ using UnityEngine.InputSystem;
 
 public class  Movimiento : MonoBehaviour
 {
-    public GameObject cuerpo;
+    public GameObject body;
     public GameObject canon;
 
-    
+    public float sensibilidad = 0.25f;
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
-        float x = Input.GetAxis("Mouse X");
-        float y = Input.GetAxis("Mouse Y");
+        Vector2 mouseDelta = Mouse.current.delta.ReadValue();
 
-        cuerpo.transform.localEulerAngles += new Vector3(0, x, 0);
-        canon.transform.localEulerAngles += new Vector3(y, x, 0);
+        float x = mouseDelta.x;
+        float y = mouseDelta.y;
+
+        body.transform.localEulerAngles += new Vector3(0, x * sensibilidad, 0);
+        canon.transform.localEulerAngles += new Vector3(-y * sensibilidad, x * sensibilidad, 0);
     }
 }
