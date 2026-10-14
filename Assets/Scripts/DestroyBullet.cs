@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DestroyTargetsBala : MonoBehaviour
+public class DestroyBullet : MonoBehaviour
 {
     void Update()
     {

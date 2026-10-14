@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class  Movimiento : MonoBehaviour
+public class  TurretMovement : MonoBehaviour
 {
     public GameObject body;
     public GameObject canon;
 
-    public float sensibilidad = 0.25f;
+    public float sensibility = 0.25f;
     void Start()
     {
         Cursor.visible = false;
@@ -20,7 +20,7 @@ public class  Movimiento : MonoBehaviour
         float x = mouseDelta.x;
         float y = mouseDelta.y;
 
-        body.transform.localEulerAngles += new Vector3(0, x * sensibilidad, 0);
-        canon.transform.localEulerAngles += new Vector3(-y * sensibilidad, x * sensibilidad, 0);
+        body.transform.localEulerAngles += new Vector3(0, x * sensibility, 0);
+        canon.transform.localEulerAngles += new Vector3(-y * sensibility, x * sensibility, 0);
     }
 }

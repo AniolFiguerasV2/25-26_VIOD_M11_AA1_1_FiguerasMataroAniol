@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class Puntos : MonoBehaviour
+public class PointsEditor : MonoBehaviour
 {
-    public float puntuacion = 0f;
+    public float ernedPoints = 0f;
     public TextMeshProUGUI textMeshPro;
-    public static Puntos instance;
+    public static PointsEditor instance;
     void Start()
     {
         if(instance == null)
@@ -18,7 +18,7 @@ public class Puntos : MonoBehaviour
     {
         if (textMeshPro != null)
         {
-            textMeshPro.text = puntuacion.ToString();
+            textMeshPro.text = ernedPoints.ToString();
         }
     }
 }

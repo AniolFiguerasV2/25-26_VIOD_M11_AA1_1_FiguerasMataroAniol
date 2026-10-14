@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetsMovment : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
     public List<Transform> points;
     public int nextPoint = 0;
     public float speed = 5;
     public int startPoint = 0;
 
-    
+    public int addPoints = 500;
+
     void Start()
     {
         transform.position = points[startPoint].position;
@@ -34,7 +35,7 @@ public class TargetsMovment : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Puntos.instance.puntuacion -= 500;
+        PointsEditor.instance.ernedPoints -= addPoints;
     }
     
 }

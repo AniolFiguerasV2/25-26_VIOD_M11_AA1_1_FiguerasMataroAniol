@@ -5,12 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Targets
+  - Bullet
   - Balas
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - floor
   - Water
   - UI
   - 
@@ -45,3 +46,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []
