@@ -10,7 +10,7 @@ public class Shoots : MonoBehaviour
     public GameObject bullet;
 
     public float bulletVel = 50f;
-    public float BulletTime = 5f;
+    public float bulletTime = 5f;
 
     public float bulletScale = 0.25f;
     public float bulletRotation = 90f;
@@ -41,6 +41,6 @@ public class Shoots : MonoBehaviour
         rb = newBullet.GetComponent<Rigidbody>();
         rb.AddForce(bulletOutput.transform.forward * bulletVel, ForceMode.Impulse);
 
-        Destroy(newBullet, BulletTime);
+        Destroy(newBullet, bulletTime);
     }
 }
